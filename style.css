@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@700&family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@700&family=Raleway:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 40%;
+    min-width: 450px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Montserrat',sans-serif;
+}
+h1{
+    font-family: 'RaleWay',sans-serif;
+    margin-top: 2rem;
+    color: black;
+    text-decoration: none;
+}
+a{
+    color: black;
+    text-decoration:none;
+}
+.tabs{
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    margin-top: 3rem;
+}
+.rectangle{
+    opacity: 1;
+    transition: 1s;
+    background-color:white;
+    height: 3px;
+    margin-top: 0.5rem;
+    border-radius: 5rem 5rem 0 0 ;
+}
+hr{
+    color: #BDBDBD;
+    border: 0.3px solid;
+}
+
+.taskform{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+input{
+    border-radius: 0.75rem;
+    padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+    border: 0.5px solid black;
+}
+button{
+    color: white;
+    background-color: #2F80ED;
+    padding: 0.7rem 1.7rem;
+    border-radius:0.5rem;
+    border: none;
+}
+
+.tasklist{
+    margin-top: 2rem;
+    text-align: left;
+    list-style-type: none;
+}
+.tasklist li{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0rem;
+}
+.taskcheck{
+    margin-right: 0.5rem;
+    display: inline;
+}
+.deletebtn{
+    display: none;
+}
+
+.all{
+    
+}
+
+.active{   
+}
+
+.completed{
+}  
+
+/* 
+.tasks{
+    /* position: relative; */
+    /* width: 80%;
+    margin: auto;
+}
+.initial{
+    display: none;
+}
+
+.taskLabel{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+*/
