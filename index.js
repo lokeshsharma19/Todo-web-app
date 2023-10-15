@@ -1,10 +1,6 @@
 const taskForm = document.querySelector(".taskform")
 const newInput= document.querySelector(".taskdesc") 
 const taskList= document.querySelector(".tasklist") 
-
-let i=0;
-
-const status = [];
 const allTaskDesc=[];
 const completedTasks=[];
 
@@ -39,11 +35,11 @@ const storeTask = function(taskObj) {
 
 
 //
-const updateStorage = function(newInputText,x){
+const updateStorage = function(newInputText,f){
     const oldTasks = JSON.parse(localStorage.getItem("task")) || [] ;
     const oldCompletedTasks= JSON.parse(localStorage.getItem("completedTasks")) || [] ;
     let j=0;
-    if(x==1){
+    if(f==1){
         oldTasks.forEach(task => {
             if(task.taskText==newInputText){
                     oldTasks[j].status=0;
@@ -54,7 +50,8 @@ const updateStorage = function(newInputText,x){
             j++;
         });
     }
-    else if(x==0){
+    else if(f==0){
+        console.log("hello")
         oldCompletedTasks.forEach((task,index) => {
             if(task.taskText==newInputText){
                 oldCompletedTasks.splice(index,1);
@@ -168,9 +165,7 @@ const createTask = (newInputText,x)=> {
     const deleteBtn = newLi.querySelector(".deletebtn");
     deleteBtn.addEventListener("click",(e)=>{
         newLi.remove();
-        if(x==1){
-            updateStorage(newInputText,0);
-        }
+        updateStorage(newInputText,0);
     })
 }
 
@@ -178,6 +173,10 @@ const createTask = (newInputText,x)=> {
 
 taskForm.addEventListener("submit",(e) => {
     e.preventDefault();
+    if(newInput.value==""){
+        alert("Enter Something");
+        return false;
+    }
     createTask(newInput.value,1);
     const taskObj = {
         status: 1,
