@@ -9,3 +9,4 @@ export const taskObj = {
 };
 
 export const tabs = document.querySelector(".tabs");
+export const alertBox = document.querySelector(".alert");

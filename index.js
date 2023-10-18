@@ -7,6 +7,7 @@ import { taskObj } from "./utils/constants.js";
 import { tabs } from "./utils/constants.js";
 import { tabManagement } from "./utils/helper/tabManagement.js";
 import { taskReloader } from "./utils/helper/taskReloader.js";
+import { alertBox } from "./utils/constants.js";
 // const taskForm = document.querySelector(".taskform");
 // const newInput = document.querySelector(".taskdesc");
 // const taskList = document.querySelector(".tasklist");
@@ -159,9 +160,12 @@ tabs.addEventListener("click", (e) => {
 });
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  newInput.value = newInput.value.trim();
   if (newInput.value == "") {
-    alert("Enter Something");
+    alertBox.style.display = "block";
     return false;
+  } else if (newInput.value != "") {
+    alertBox.style.display = "none";
   }
   createTask(newInput.value, 1);
   taskObj.taskText = newInput.value;

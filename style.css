@@ -7,6 +7,8 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+}
 .container {
   width: 40%;
   min-width: 450px;
@@ -48,10 +50,21 @@ hr {
 
 .taskform {
   display: flex;
+  position: relative;
   justify-content: space-between;
   margin-top: 2rem;
 }
-
+.alert {
+  display: none;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: -16.5px;
+  left: 10px;
+  width: 16rem;
+  border: 0.5px solid rgb(125, 125, 125);
+  border-radius: 0 0 2rem 2rem;
+  color: rgb(229, 104, 104);
+}
 input {
   border-radius: 0.75rem;
   padding: 0.7rem 0.7rem 0.7rem 0.7rem;
