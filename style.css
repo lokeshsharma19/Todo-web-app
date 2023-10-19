@@ -69,6 +69,7 @@ input {
   border-radius: 0.75rem;
   padding: 0.7rem 0.7rem 0.7rem 0.7rem;
   border: 0.5px solid black;
+  outline: none;
 }
 button {
   color: white;
@@ -76,6 +77,7 @@ button {
   padding: 0.7rem 1.7rem;
   border-radius: 0.5rem;
   border: none;
+  cursor: pointer;
 }
 
 .tasklist {
