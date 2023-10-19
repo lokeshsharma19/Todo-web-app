@@ -20,14 +20,24 @@ export const createTask = (newInputText, x) => {
       updateStorage(newInputText, 1);
     }
   }
+  // taskCheck.addEventListener("change", (e) => {
+  //   if (taskCheck.checked == true) {
+  //     taskDesc.style.textDecoration = "line-through";
+  //     if (x == 1) {
+  //       updateStorage(newInputText, 1);
+  //     }
+  //   }
+  //   if (taskCheck.checked == false) taskCheck.checked = true;
+  // });
+
   taskCheck.addEventListener("change", (e) => {
-    if (taskCheck.checked == true) {
+    if (!taskCheck.checked) {
+      taskDesc.style.textDecoration = "none";
+      taskDesc.style.color = "black";
+    } else {
       taskDesc.style.textDecoration = "line-through";
-      if (x == 1) {
-        updateStorage(newInputText, 1);
-      }
+      taskDesc.style.color = "grey";
     }
-    if (taskCheck.checked == false) taskCheck.checked = true;
   });
 
   const deleteBtn = newLi.querySelector(".deletebtn");
